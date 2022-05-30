@@ -1,0 +1,134 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+body {
+  padding: 70px 26px;
+  background-color: var(--light-gray);
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h1,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.card-inner {
+  padding: 32px 22px;
+}
+
+.card-inner h1 {
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+
+.card-inner .sub-title {
+  font-size: 18px;
+  margin-bottom: 26px;
+}
+
+.card-community {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-community h1 {
+  color: var(--cyan);
+}
+
+.card-community .sub-title {
+  color: var(--bright-yellow);
+}
+
+.card-community .description {
+  color: var(--cyan);
+}
+
+.card-subscription {
+  background-color: var(--cyan);
+}
+
+.card-subscription h1,
+.card-subscription p,
+.card-why-us h1,
+.card-why-us p {
+  color: white;
+}
+
+.card-subscription .btn {
+  display: block;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: var(--bright-yellow);
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card-subscription .money {
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 14px;
+}
+
+.card-subscription .per-month {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card-why-us {
+  background-color: #4abebd;
+  border-radius: 0 0 5px 5px;
+}
+
+.card-why-us ul {
+  list-style: none;
+  color: white;
+}
+
+@media screen and (min-width: 637px) {
+  html {
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .card {
+    max-width: 636px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-inner {
+    padding: 46px 42px;
+  }
+
+  .card-community {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .card-subscription {
+    border-radius: 0 0 0 5px;
+  }
+
+  .card-why-us {
+    border-radius: 0 0 5px 0;
+  }
+}
